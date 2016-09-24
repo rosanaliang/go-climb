@@ -46,43 +46,7 @@ var users = [
         last_name: 'Liang',
         email: 'rosesfromanna@gmail.com',
         phone_number: '9099794134'
-    },
-    {
-        first_name: 'Tony',
-        last_name: 'Lin',
-        email: 'yechao@umich.edu',
-        phone_number: '3474754778'
     }
-    // {
-    //     first_name: 'Aditya',
-    //     last_name: 'Person',
-    //     email: 'aditya@aditya.com',
-    //     phone_number: '9099794134'
-    // },
-    // {
-    //     first_name: 'Joshua',
-    //     last_name: 'Howard',
-    //     email: 'joshua@joshua.com',
-    //     phone_number: '9099794134'
-    // },
-    // {
-    //     first_name: 'Kayla',
-    //     last_name: 'Fuchs',
-    //     email: 'kayla@kayla.com',
-    //     phone_number: '9099794134'
-    // },
-    // {
-    //     first_name: 'Gil',
-    //     last_name: 'Lawson',
-    //     email: 'gil@gil.com',
-    //     phone_number: '9099794134'
-    // },
-    // {
-    //     first_name: 'Nikita',
-    //     last_name: 'Person',
-    //     email: 'nikita@nikita.com',
-    //     phone_number: '9099794134'
-    // }
 ];
 
 var checkIns = [
@@ -93,10 +57,6 @@ var checkIns = [
     {
         venue: 'Brooklyn Boulders',
         count: 7
-    },
-    {
-        venue: 'The Cliffs',
-        count: 5
     }
 ];
 

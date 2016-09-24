@@ -26,6 +26,8 @@
         <script src="/js/signup/signup.js"></script>
         <script src="/js/about/about.js"></script>
         <script src="/js/signup-success/signup-success.js"></script>
+        <script src="/js/common/count.factory.js"></script>
+        <script src="/js/common/main.controller.js"></script>
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
         <!--[if lt IE 9]>
@@ -33,7 +35,7 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
     </head>
-    <body ng-app="GoClimb" data-spy="scroll" data-target="nav" style="background-color: #49a76c">
+    <body ng-app="GoClimb" data-spy="scroll" data-target="nav">
         <header id="header-3" class="soft-scroll header-3">
             <nav>
                 <div class="container">
@@ -53,35 +55,66 @@
                         </nav>
                     </div>
                 </div>
+                <div class="brand">
+                    <a href="#"></a>
+                </div>
+                <div class="spacer"></div>
+                <div class="navicon">
+                    <a id="nav-toggle" class="nav-slide-btn" href="#"><span style="background-color: #CCCCCC"></span></a>
+                </div>
                 <!-- /.container-fluid -->
             </nav>
             <!-- /.nav -->
-            <section class="hero">
-                <div class="container">
-                    <div class="brand">
-                        <a href="#"></a>
-                    </div>
-                    <div class="navicon">
-                        <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
-                    </div>
-                    <div>
-                        <ui-view></ui-view>
-                    </div>
-                   <!--  <div class="col-md-6 col-md-offset-3 text-center">
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-info btn-block">Find out more</a>
+
+            <div ng-controller="MainCtrl">
+                <section class="green" ng-if="currentCount < 4">
+                    <div class="container">
+                        <div class="brand">
+                            <a href="#"></a>
                         </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-danger btn-block">Buy here</a>
+                        <!-- <div class="navicon">
+                            <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
+                        </div> -->
+                        <div>
+                            <ui-view></ui-view>
                         </div>
-                    </div> -->
-                </div>
-            </section>
-        </header>
-        <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/js/plugins.js"></script>
-<!--         <script src="https://maps.google.com/maps/api/js?sensor=true"></script> -->
-        <script type="text/javascript" src="/js/bskit-scripts.js"></script>
+                    </div>
+                </section>
+
+                <section class="yellow" ng-if="currentCount > 3 && currentCount < 8">
+                    <div class="container">
+                        <div class="brand">
+                            <a href="#"></a>
+                        </div>
+                       <!--  <div class="navicon">
+                            <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
+                        </div> -->
+                        <div>
+                            <ui-view></ui-view>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="red" ng-if="currentCount > 7">
+                    <div class="container">
+                        <div class="brand">
+                            <a href="#"></a>
+                        </div>
+                        <!-- <div class="navicon">
+                            <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
+                        </div> -->
+                        <div>
+                            <ui-view></ui-view>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            </header>
+
+            <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+            <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/js/plugins.js"></script>
+    <!--         <script src="https://maps.google.com/maps/api/js?sensor=true"></script> -->
+            <script type="text/javascript" src="/js/bskit-scripts.js"></script>
     </body>
 </html>

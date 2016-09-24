@@ -11,7 +11,7 @@ db.sync()
     var PORT = 3000;
     server.listen(PORT, function() {
         console.log('Server started on port ', PORT);
-        schedule.start();
+        // schedule.start();
     });
 })
 .catch(function(err) {

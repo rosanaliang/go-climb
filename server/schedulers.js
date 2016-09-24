@@ -34,6 +34,7 @@ function start() {
     getNewRoutes();
 }
 
+// twilio sends a message to each user in the db
 function sendMessages() {
     User.findAll()
     .then(function(users) {

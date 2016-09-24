@@ -8,8 +8,11 @@ app.config(function ($stateProvider) {
 
 });
 
-app.controller('HomeCtrl', function ($scope, $state, $log, UserFactory) {
+app.controller('HomeCtrl', function ($scope, $state, $log, UserFactory, CountFactory) {
 
-
+    CountFactory.getCount()
+    .then(function(count) {
+        $scope.currentCount = count.count;
+    });
 
 });

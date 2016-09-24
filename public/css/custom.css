@@ -9,3 +9,59 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
     border-color: #ccc;
 }
+
+.green {
+    padding: 50px 0 300px 0;
+    height: auto;
+    background-color: #49a76c;
+}
+
+#header-3 .green h1 {
+    margin-top: 100px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#header-3 .green .lead {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.yellow {
+    padding: 50px 0 300px 0;
+    height: auto;
+    background-color: #E4B926;
+}
+
+#header-3 .yellow h1 {
+    margin-top: 100px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#header-3 .yellow .lead {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.red {
+    padding: 50px 0 300px 0;
+    height: auto;
+    background-color: #C34832;
+}
+
+#header-3 .red h1 {
+    margin-top: 100px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#header-3 .red .lead {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.spacer {
+    width: 100%;
+    height: 16px;
+}
