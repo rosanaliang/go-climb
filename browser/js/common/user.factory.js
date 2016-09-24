@@ -12,6 +12,13 @@ app.factory('UserFactory', function($http) {
                     .then(function(response) {
                         return response.data;
                     });
+        },
+
+        delete: function(phone) {
+            return $http.delete('/api/users/' + phone)
+                    .then(function(response) {
+                        return response.data;
+                    });
         }
     };
 });

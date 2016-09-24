@@ -34,10 +34,10 @@ router.post('/', function(req, res, next) {
     .catch(next);
 });
 
-router.delete('/:id', function(req, res, next) {
+router.delete('/:phone', function(req, res, next) {
     User.destroy({
         where: {
-            id: req.params.id
+            phone_number: req.params.phone
         }
     })
     .then(function(deletedUser) {

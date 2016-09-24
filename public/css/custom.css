@@ -65,3 +65,22 @@
     width: 100%;
     height: 16px;
 }
+
+.btn-yes {
+    background-color: #616161;
+}
+
+.btn-yes:hover {
+    background-color: #585858;
+    color: #FFFFFF;
+}
+
+.btn-no {
+    background-color: #DEDEDE;
+    color: #000000;
+}
+
+.btn-no:hover {
+    background-color: #EBEBEB;
+    color: #000000;
+}
