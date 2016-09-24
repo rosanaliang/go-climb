@@ -13,12 +13,6 @@ module.exports = db.define('user', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    email: {
-        type: Sequelize.STRING,
-        validate: {
-            isEmail: true
-        }
-    },
     phone_number: {
         type: Sequelize.STRING
     }

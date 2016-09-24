@@ -28,6 +28,7 @@
         <script src="/js/signup-success/signup-success.js"></script>
         <script src="/js/common/count.factory.js"></script>
         <script src="/js/common/main.controller.js"></script>
+        <script src="/js/common/route.factory.js"></script>
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
         <!--[if lt IE 9]>
@@ -45,11 +46,14 @@
                                 <li>
                                     <a class="nav-slide-btn" ui-sref="home">HOME <span class="indicator"></span></a>
                                 </li>
-                                <li>
+<!--                                 <li>
                                     <a class="nav-slide-btn" ui-sref="about">ABOUT <span class="indicator"></span></a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a class="nav-slide-btn" ui-sref="signup">SIGN UP <span class="indicator"></span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-slide-btn" ui-sref="unsubscribe">UNSUBSCRIBE <span class="indicator"></span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -67,42 +71,33 @@
             <!-- /.nav -->
 
             <div ng-controller="MainCtrl">
-                <section class="green" ng-if="currentCount < 4">
+                <section class="green" ng-if="currentCount < 3">
                     <div class="container">
                         <div class="brand">
                             <a href="#"></a>
                         </div>
-                        <!-- <div class="navicon">
-                            <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
-                        </div> -->
                         <div>
                             <ui-view></ui-view>
                         </div>
                     </div>
                 </section>
 
-                <section class="yellow" ng-if="currentCount > 3 && currentCount < 8">
+                <section class="yellow" ng-if="currentCount > 2 && currentCount < 7">
                     <div class="container">
                         <div class="brand">
                             <a href="#"></a>
                         </div>
-                       <!--  <div class="navicon">
-                            <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
-                        </div> -->
                         <div>
                             <ui-view></ui-view>
                         </div>
                     </div>
                 </section>
 
-                <section class="red" ng-if="currentCount > 7">
+                <section class="red" ng-if="currentCount > 6">
                     <div class="container">
                         <div class="brand">
                             <a href="#"></a>
                         </div>
-                        <!-- <div class="navicon">
-                            <a id="nav-toggle" class="nav-slide-btn" href="#"><span></span></a>
-                        </div> -->
                         <div>
                             <ui-view></ui-view>
                         </div>

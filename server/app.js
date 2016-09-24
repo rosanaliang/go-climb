@@ -7,6 +7,7 @@ var Route = db.model('route');
 var CheckIn = db.model('checkIn');
 var users = require('./routes/user.js');
 var checkins = require('./routes/checkin.js');
+var routes = require('./routes/route.js');
 var app = express();
 module.exports = app;
 

@@ -38,13 +38,11 @@ var users = [
     {
         first_name: 'Charles',
         last_name: 'Scalesse',
-        email: 'nithya@nithya.com',
         phone_number: '9175973708'
     },
     {
         first_name: 'Rose',
         last_name: 'Liang',
-        email: 'rosesfromanna@gmail.com',
         phone_number: '9099794134'
     }
 ];
