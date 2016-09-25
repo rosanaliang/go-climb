@@ -50,7 +50,7 @@ var users = [
 var checkIns = [
     {
         venue: 'The Cliffs',
-        count: 4
+        count: 3
     },
     {
         venue: 'Brooklyn Boulders',

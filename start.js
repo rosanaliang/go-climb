@@ -8,10 +8,10 @@ db.sync()
     server.on('request', app);
 })
 .then(function() {
-    var PORT = 3000;
+    var PORT = process.env.PORT || 3000;
     server.listen(PORT, function() {
         console.log('Server started on port ', PORT);
-        // schedule.start();
+        schedule.start();
     });
 })
 .catch(function(err) {

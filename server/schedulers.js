@@ -9,9 +9,19 @@ var authToken = 'ee7b79a372e72feb797029901dae163e';
 var client = require('twilio')(accountSid, authToken);
 
 
-// check four square every hour and sendMessage() if count < 4
+// check four square every hour (except when the gym is closed) and sendMessage() if count < 3
 function getAndSaveCheckIns() {
     schedule.scheduleJob('0 * * * *', function(){
+
+        var currentDate = new Date();
+        var hour = currentDate.getHours();
+
+        console.log('HOUR: ', hour);
+
+        if (hour < 9 || hour > 22) {
+            return;
+        }
+
         fourSquare.getCheckIns(function(checkIn) {
             CheckIn.create(checkIn)
             .then(function(createdCheckIn) {
@@ -26,7 +36,9 @@ function getAndSaveCheckIns() {
                         }
                     })
                     .then(function(checkin) {
+
                         console.log('CHECKIN COUNT: ', checkin.count);
+
                         if (checkin.count < 3) {
                             sendMessage();
                         }

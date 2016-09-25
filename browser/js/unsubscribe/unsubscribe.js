@@ -16,7 +16,7 @@ app.controller('UnsubscribeCtrl', function ($scope, $state, $log, UserFactory) {
 
     $scope.clearField = function() {
         $scope.newUser.phoneNumber = null;
-    }
+    };
 
     $scope.submit = function(data) {
 
@@ -29,14 +29,6 @@ app.controller('UnsubscribeCtrl', function ($scope, $state, $log, UserFactory) {
 
         });
 
-
-        // UserFactory.add(data)
-        // .then(function(user) {
-        //     $state.go('success', { userId: user.id });
-        // })
-        // .catch(function() {
-        //     $scope.error = 'Invalid sign up credentials.';
-        // });
     };
 
 });
