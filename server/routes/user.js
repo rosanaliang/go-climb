@@ -56,8 +56,9 @@ router.post('/:phone', function(req, res, next) {
         }
     })
     .then(function(user) {
+        console.log('USER PHONE: ', user.phone_number);
         client.messages.create({
-            to: '+1' + user.dataValues.phone_number,
+            to: '+1' + user.phone_number,
             from: '+19093233665',
             body: 'GO CLIMB'
         }, function (err, message) {
