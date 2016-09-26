@@ -53,14 +53,12 @@ router.post('/:phone', function(req, res, next) {
         }
     })
     .then(function(user) {
-        users.forEach(function(user) {
-            client.messages.create({
-                to: '+1' + user.dataValues.phone_number,
-                from: '+19093233665',
-                body: 'GO CLIMB'
-            }, function (err, message) {
-                console.log(message.sid);
-            });
+        client.messages.create({
+            to: '+1' + user.dataValues.phone_number,
+            from: '+19093233665',
+            body: 'GO CLIMB'
+        }, function (err, message) {
+            console.log(message.sid);
         });
     });
 })
