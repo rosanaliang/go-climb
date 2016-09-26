@@ -56,7 +56,7 @@ router.post('/:phone', function(req, res, next) {
         }
     })
     .then(function(user) {
-        console.log('USER PHONE: ', user.phone_number);
+        console.log('USER PHONE');
         client.messages.create({
             to: '+1' + user.phone_number,
             from: '+19093233665',
@@ -64,5 +64,7 @@ router.post('/:phone', function(req, res, next) {
         }, function (err, message) {
             console.log(message.sid);
         });
-    });
+        res.status(200).end();
+    })
+    .catch(next);
 })
