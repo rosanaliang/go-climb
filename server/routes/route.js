@@ -29,3 +29,15 @@ router.post('/', function(req, res, next) {
     })
     .catch(next);
 });
+
+router.delete('/:id', function(req, res, next) {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(function(deletedRoute) {
+        res.status(204).end();
+    })
+    .catch(next);
+});
