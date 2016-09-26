@@ -3,6 +3,9 @@
 var router = require('express').Router();
 var db = require('../db');
 var User = db.model('user');
+var accountSid = 'AC1ff753ca29d2c2cf84e8842c1d25c6f7';
+var authToken = 'ee7b79a372e72feb797029901dae163e';
+var client = require('twilio')(accountSid, authToken);
 module.exports = router;
 
 router.get('/', function(req, res, next) {
