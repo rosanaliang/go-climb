@@ -1,9 +1,35 @@
-<div class="col-md-8 col-md-offset-2 text-center main-page-content">
-    <div class="editContent">
-        <h1> </h1>
+<div class="green" ng-if="currentCount < 3">
+    <div class="col-md-8 col-md-offset-2 text-center main-page-content">
+        <div class="editContent">
+            <h1> </h1>
+        </div>
+        <div class="editContent">
+            <h3 style="color: #FFFFFF">Congratulations, {{ currentUser.first_name }}!</h3>
+            <p class="lead">You have successfully registered to receive notifications from Go Climb.</p>
+        </div>
     </div>
-    <div class="editContent">
-        <h3>Congratulations, {{ currentUser.first_name }}!</h3>
-        <p class="lead">You have successfully registered to receive notifications from Go Climb.</p>
+</div>
+
+<div class="yellow" ng-if="currentCount > 2 && currentCount < 7">
+    <div class="col-md-8 col-md-offset-2 text-center main-page-content">
+        <div class="editContent">
+            <h1> </h1>
+        </div>
+        <div class="editContent">
+            <h3 style="color: #FFFFFF">Congratulations, {{ currentUser.first_name }}!</h3>
+            <p class="lead">You have successfully registered to receive notifications from Go Climb.</p>
+        </div>
+    </div>
+</div>
+
+<div class="red" ng-if="currentCount > 6">
+    <div class="col-md-8 col-md-offset-2 text-center main-page-content">
+        <div class="editContent">
+            <h1> </h1>
+        </div>
+        <div class="editContent">
+            <h3 style="color: #FFFFFF">Congratulations, {{ currentUser.first_name }}!</h3>
+            <p class="lead">You have successfully registered to receive notifications from Go Climb.</p>
+        </div>
     </div>
 </div>
