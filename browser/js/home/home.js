@@ -17,6 +17,7 @@ app.controller('HomeCtrl', function ($scope, $state, $log, UserFactory, CountFac
 
     RouteFactory.getRoute()
     .then(function(route) {
+        $scope.route = route;
         var currentRoute = route.createdAt;
         var year = currentRoute.slice(0, 4);
         var month = currentRoute.slice(5, 7);
