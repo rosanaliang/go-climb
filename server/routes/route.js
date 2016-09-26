@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.delete('/:id', function(req, res, next) {
-    User.destroy({
+    Route.destroy({
         where: {
             id: req.params.id
         }
